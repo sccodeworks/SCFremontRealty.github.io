@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SC Fremont Realty</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="SC Fremont Realty">
+                <span class="logo-text">SC Fremont Realty</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="listings.html">Listings</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="btn-contact active">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="compliance-bar">
+        <div class="container">
+            <p><strong>SC Fremont Realty</strong> | Norfolk, Virginia | VA Broker License: 0226033411 | Licensed in Virginia</p>
+        </div>
+    </div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Let's discuss your commercial real estate goals</p>
+        </div>
+    </section>
+
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info-section">
+                    <h2>Get In Touch</h2>
+                    <p>Whether you're looking to buy, sell, lease, or invest in commercial real estate, SC Fremont Realty is here to help. Contact us today for a confidential consultation.</p>
+
+                    <div class="contact-card">
+                        <h3>Suresh Chappidi, CCIM®</h3>
+                        <p class="title">Principal Broker</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>Licensing Information</h3>
+                        <p><strong>VA Broker License:</strong> 0226033411<br>
+                        <strong>Personal VA License:</strong> 234590<br>
+                        <strong>Licensed in:</strong> Virginia</p>
+                    </div>
+                </div>
+
+                <div class="contact-form-section">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interest">I'm interested in *</label>
+                            <select id="interest" name="interest" required>
+                                <option value="">Select an option</option>
+                                <option value="buying">Buying Commercial Property</option>
+                                <option value="selling">Selling Commercial Property</option>
+                                <option value="leasing-tenant">Leasing Space (Tenant)</option>
+                                <option value="leasing-landlord">Leasing My Property (Landlord)</option>
+                                <option value="investment">Investment Analysis</option>
+                                <option value="consultation">General Consultation</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="assetType">Asset Type</label>
+                            <select id="assetType" name="assetType">
+                                <option value="">Select asset type</option>
+                                <option value="office">Office</option>
+                                <option value="retail">Retail</option>
+                                <option value="industrial">Industrial</option>
+                                <option value="multifamily">Multifamily</option>
+                                <option value="land">Land</option>
+                                <option value="special">Special Purpose</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                    <div id="formMessage" class="form-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="SC Fremont Realty">
+                        <span>SC Fremont Realty</span>
+                    </div>
+                    <p>Virginia-based commercial real estate brokerage specializing in all asset types.</p>
+                    <p class="ccim-badge">CCIM® Certified</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul style="list-style:none; padding:0;">
+                        <li style="margin-bottom:0.5rem;"><a href="listings.html" style="color:#808080;text-decoration:none;">Listings</a></li>
+                        <li style="margin-bottom:0.5rem;"><a href="services.html" style="color:#808080;text-decoration:none;">Services</a></li>
+                        <li style="margin-bottom:0.5rem;"><a href="about.html" style="color:#808080;text-decoration:none;">About</a></li>
+                        <li style="margin-bottom:0.5rem;"><a href="contact.html" style="color:#808080;text-decoration:none;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Licensing</h4>
+                    <p><strong>Broker License (VA):</strong> 0226033411</p>
+                    <p><strong>Personal License (VA):</strong> 234590</p>
+                    <p>Licensed in: Virginia</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SC Fremont Realty. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Listings - SC Fremont Realty</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="SC Fremont Realty">
+                <span class="logo-text">SC Fremont Realty</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="listings.html" class="active">Listings</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="btn-contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="compliance-bar">
+        <div class="container">
+            <p><strong>SC Fremont Realty</strong> | Norfolk, Virginia | VA Broker License: 0226033411 | Licensed in Virginia</p>
+        </div>
+    </div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Property Listings</h1>
+            <p>Explore our current commercial real estate opportunities across Virginia</p>
+        </div>
+    </section>
+
+    <section class="listings-page">
+        <div class="container">
+            <div class="listings-note">
+                Representative listings shown below. Contact us for current availability and off-market opportunities.
+            </div>
+
+            <div class="filters">
+                <h3>Filter Properties</h3>
+                <div class="filter-grid">
+                    <select id="assetType">
+                        <option value="all">All Asset Types</option>
+                        <option value="office">Office</option>
+                        <option value="retail">Retail</option>
+                        <option value="industrial">Industrial</option>
+                        <option value="multifamily">Multifamily</option>
+                        <option value="land">Land</option>
+                        <option value="special">Special Purpose</option>
+                    </select>
+                    <select id="transactionType">
+                        <option value="all">Sale or Lease</option>
+                        <option value="sale">For Sale</option>
+                        <option value="lease">For Lease</option>
+                    </select>
+                    <input type="text" id="location" placeholder="City or ZIP code">
+                    <button class="btn btn-primary" onclick="filterProperties()">Search</button>
+                </div>
+            </div>
+
+            <div class="listings-grid" id="listingsGrid">
+                <div class="listing-card" data-type="office" data-transaction="sale">
+                    <div class="listing-image" style="background-image: linear-gradient(135deg, #172c59 0%, #00a9df 100%);"></div>
+                    <div class="listing-badge sale">For Sale</div>
+                    <div class="listing-content">
+                        <h3>Premium Office Building</h3>
+                        <p class="listing-location">📍 Norfolk, Virginia</p>
+                        <p class="listing-type">Office | 25,000 SF</p>
+                        <p class="listing-price">$4,250,000</p>
+                        <a href="contact.html" class="btn btn-outline">Request Information</a>
+                    </div>
+                </div>
+
+                <div class="listing-card" data-type="retail" data-transaction="lease">
+                    <div class="listing-image" style="background-image: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                    <div class="listing-badge lease">For Lease</div>
+                    <div class="listing-content">
+                        <h3>Retail Strip Center</h3>
+                        <p class="listing-location">📍 Virginia Beach, Virginia</p>
+                        <p class="listing-type">Retail | 8,500 SF</p>
+                        <p class="listing-price">$22/SF/Year NNN</p>
+                        <a href="contact.html" class="btn btn-outline">Request Information</a>
+                    </div>
+                </div>
+
+                <div class="listing-card" data-type="industrial" data-transaction="sale">
+                    <div class="listing-image" style="background-image: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                    <div class="listing-badge sale">For Sale</div>
+                    <div class="listing-content">
+                        <h3>Warehouse Distribution Center</h3>
+                        <p class="listing-location">📍 Chesapeake, Virginia</p>
+                        <p class="listing-type">Industrial | 50,000 SF</p>
+                        <p class="listing-price">$6,500,000</p>
+                        <a href="contact.html" class="btn btn-outline">Request Information</a>
+                    </div>
+                </div>
+
+                <div class="listing-card" data-type="multifamily" data-transaction="sale">
+                    <div class="listing-image" style="background-image: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+                    <div class="listing-badge sale">For Sale</div>
+                    <div class="listing-content">
+                        <h3>Multifamily Apartment Complex</h3>
+                        <p class="listing-location">📍 Richmond, Virginia</p>
+                        <p class="listing-type">Multifamily | 48 Units</p>
+                        <p class="listing-price">$7,200,000</p>
+                        <a href="contact.html" class="btn btn-outline">Request Information</a>
+                    </div>
+                </div>
+
+                <div class="listing-card" data-type="land" data-transaction="sale">
+                    <div class="listing-image" style="background-image: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);"></div>
+                    <div class="listing-badge sale">For Sale</div>
+                    <div class="listing-content">
+                        <h3>Development Land Opportunity</h3>
+                        <p class="listing-location">📍 Hampton, Virginia</p>
+                        <p class="listing-type">Land | 12.5 Acres</p>
+                        <p class="listing-price">$1,875,000</p>
+                        <a href="contact.html" class="btn btn-outline">Request Information</a>
+                    </div>
+                </div>
+
+                <div class="listing-card" data-type="office" data-transaction="lease">
+                    <div class="listing-image" style="background-image: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);"></div>
+                    <div class="listing-badge lease">For Lease</div>
+                    <div class="listing-content">
+                        <h3>Class A Office Space</h3>
+                        <p class="listing-location">📍 Newport News, Virginia</p>
+                        <p class="listing-type">Office | 5,200 SF</p>
+                        <p class="listing-price">$28/SF/Year</p>
+                        <a href="contact.html" class="btn btn-outline">Request Information</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-box">
+                <h3>Looking for something specific?</h3>
+                <p>Contact us to discuss your commercial real estate needs. We have access to off-market opportunities and coming-soon listings.</p>
+                <a href="contact.html" class="btn btn-primary">Contact Suresh Chappidi, CCIM®</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="SC Fremont Realty">
+                        <span>SC Fremont Realty</span>
+                    </div>
+                    <p>Virginia-based commercial real estate brokerage specializing in all asset types.</p>
+                    <p class="ccim-badge">CCIM® Certified</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul style="list-style:none; padding:0;">
+                        <li style="margin-bottom:0.5rem;"><a href="listings.html" style="color:#808080;text-decoration:none;">Listings</a></li>
+                        <li style="margin-bottom:0.5rem;"><a href="services.html" style="color:#808080;text-decoration:none;">Services</a></li>
+                        <li style="margin-bottom:0.5rem;"><a href="about.html" style="color:#808080;text-decoration:none;">About</a></li>
+                        <li style="margin-bottom:0.5rem;"><a href="contact.html" style="color:#808080;text-decoration:none;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Licensing</h4>
+                    <p><strong>Broker License (VA):</strong> 0226033411</p>
+                    <p><strong>Personal License (VA):</strong> 234590</p>
+                    <p>Licensed in: Virginia</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SC Fremont Realty. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
